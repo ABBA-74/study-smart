@@ -328,6 +328,41 @@ footer {
 }
 
 ///////////////////////////////
+/// ABOUT US PAGE
+///////////////////////////////
+
+.about-us {
+  margin-top: 98px;
+}
+
+.about-us-content {
+  max-width: 64ch;
+}
+
+.company-pict,
+.map-pict {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
+  box-shadow: $shadow;
+}
+.member-picture {
+  height: 300px;
+  width: 450px;
+  object-fit: cover;
+  box-shadow: $shadow;
+}
+.member-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-top: 1rem;
+  margin: 0;
+}
+
+.member-status {
+  padding-bottom: 1.2rem;
+}
+///////////////////////////////
 /// UTILITIES
 ///////////////////////////////
 
