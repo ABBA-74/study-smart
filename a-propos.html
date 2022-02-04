@@ -73,13 +73,15 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link me-3" href="#">Service</a>
+                <a class="nav-link me-3" href="./services.html">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-3" href="#">Activités</a>
+                <a class="nav-link me-3" href="./activites.html">Activités</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-3" href="#">Contactez-nous</a>
+                <a class="nav-link me-3" href="./contact.html"
+                  >Contactez-nous</a
+                >
               </li>
             </ul>
           </div>
@@ -87,65 +89,71 @@
       </nav>
     </header>
     <main>
-      <div class="about-us container-md px-3 px-lg-0">
-        <h1 class="text-center text-uppercase p-4">Qui sommes-nous?</h1>
-        <section class="about-us-description">
-          <h2 class="text-start pb-5">Association STUDI SMART</h2>
+      <div class="container-md px-3 px-lg-0">
+        <h1 class="about-us-title text-center text-uppercase pt-5 mb-5">
+          Qui sommes-nous?
+        </h1>
+        <section class="presentation">
           <article class="d-flex flex-column flex-lg-row">
+            <div
+              class="presentation__content col-12 col-lg-6 d-flex align-items-center"
+            >
+              <div>
+                <h2 class="presentation__title text-start mb-4 mb-lg-5">
+                  Association STUDI SMART
+                </h2>
+                <p class="presentation__body pe-0 pe-md-3 pe-lg-5 mb-4 mb-sm-5">
+                  Créé en 2020, l’association SMART répond aux besoins de nos
+                  enfants afin de surmonter leurs difficultés d’apprentissage
+                  et/ou d’approfondir leurs connaissances.
+                  <br /><br />
+                  Notre objectif principal est de lutter contre le décrochage
+                  scolaire en apportant aux élèves et étudiants le soutien
+                  nécessaire.
+                </p>
+              </div>
+            </div>
             <div class="col-12 col-lg-6 text-center">
               <img
-                class="img-fluid company-pict rounded"
+                class="presentation__company-pict img-fluid rounded p-2 p-md-3 p-lg-4 p-xl-5"
                 src="./assets/img/s04-batiment.jpg"
                 alt="photo du batiment de l'association"
               />
-              <figcaption class="text-center pt-2 pb-5">
+              <figcaption class="text-center mt-2 mb-4 mb-sm-5">
                 Photo de nos locaux basés sur Toulon
               </figcaption>
             </div>
-            <div
-              class="col-12 col-lg-6 about-us-content d-flex align-items-center"
-            >
-              <p class="">
-                Créé en 2020, l’association SMART répond aux besoins de nos
-                enfants afin de surmonter leurs difficultés d’apprentissage
-                et/ou d’approfondir leurs connaissances.
-                <br />
-                Notre objectif principal est de lutter contre le décrochage
-                scolaire en apportant aux élèves et étudiants le soutien
-                nécessaire.
-              </p>
-            </div>
           </article>
           <article class="d-flex flex-column-reverse flex-lg-row">
+            <div class="col-12 col-lg-6 text-center">
+              <img
+                class="presentation__map-pict img-fluid rounded"
+                src="./assets/img/s04-localisation.jpg"
+                alt="localisation avec une image de google map"
+              />
+              <figcaption class="mt-2 mb-5">
+                Study Smart 9 Rue de l’espérence 68000 TOULON
+              </figcaption>
+            </div>
             <div
-              class="col-12 col-lg-6 about-us-content d-flex align-items-center"
+              class="presentation__content col-12 col-lg-6 d-flex align-items-center"
             >
-              <p>
+              <p class="presentation__body ps-lg-5 mb-4 mb-sm-5">
                 Tout au long de leur scolarité, les élèves bénéficieront ainsi
                 d’un accompagnement personnalisé de qualité. Notre but est
                 d’aider vos enfants dans l’apprentissage de leurs leçons, la
                 réalisation de leurs devoirs et travaux divers.
-                <br />
+                <br /><br />
                 Nous travaillons actuellement avec plus de 250 enfants à travers
                 la France. L’échec scolaire n’est pas une fatalité. Nous pouvons
                 changer le futur de vos enfants.
               </p>
             </div>
-            <div class="col-12 col-lg-6 text-center">
-              <img
-                class="img-fluid map-pict rounded"
-                src="./assets/img/s04-localisation.jpg"
-                alt="localisation avec une image de google map"
-              />
-              <figcaption class="text-center pt-2 pb-5">
-                Study Smart 9 Rue de l’espérence 68000 TOULON
-              </figcaption>
-            </div>
           </article>
         </section>
 
         <section class="our-team">
-          <h2 class="text-start pb-5">L’équipe</h2>
+          <h2 class="text-start mb-4 mb-lg-5">L’équipe</h2>
           <p class="members-desc">
             Aujourd’hui, nous sommes une équipe composée de 6 salariés et de 30
             bénévoles.<br />Nous collaborons avec plus de 120 professeurs
@@ -153,74 +161,98 @@
           </p>
           <div class="row d-flex text-center">
             <div class="col-12 col-md-6 col-lg-4">
-              <img
-                class="member-picture img-fluid img-thumbnail"
-                src="./assets/img/photo-patrick-salmon.jpg"
-                alt="Photo de Patrick SALMON"
-                srcset=""
-              />
-              <p class="member-name">Patrick SALMON</p>
-              <p class="member-status">Président de l'association</p>
+              <figure>
+                <img
+                  class="member-pict img-fluid img-thumbnail"
+                  src="./assets/img/photo-patrick-salmon.jpg"
+                  alt="Photo de Patrick SALMON"
+                  srcset=""
+                />
+                <figcaption>
+                  <p class="member-name">Patrick SALMON</p>
+                  <p class="member-status">Président de l'association</p>
+                </figcaption>
+              </figure>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-              <img
-                class="member-picture img-fluid img-thumbnail"
-                src="./assets/img/photo-lucie-blanc.jpg"
-                alt="Photo de Lucie BLANC"
-                srcset=""
-              />
-              <p class="member-name">Lucie BLANC</p>
-              <p class="member-status">Trésorier</p>
+              <figure>
+                <img
+                  class="member-pict img-fluid img-thumbnail"
+                  src="./assets/img/photo-lucie-blanc.jpg"
+                  alt="Photo de Lucie BLANC"
+                  srcset=""
+                />
+                <figcaption>
+                  <p class="member-name">Lucie BLANC</p>
+                  <p class="member-status">Trésorier</p>
+                </figcaption>
+              </figure>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-              <img
-                class="member-picture img-fluid img-thumbnail"
-                src="./assets/img/photo-camille-durand.jpg"
-                alt="Photo de Camille DURAND"
-                srcset=""
-              />
-              <p class="member-name">Camille DURAND</p>
-              <p class="member-status">Secrétaire</p>
+              <figure>
+                <img
+                  class="member-pict img-fluid img-thumbnail"
+                  src="./assets/img/photo-camille-durand.jpg"
+                  alt="Photo de Camille DURAND"
+                  srcset=""
+                />
+                <figcaption>
+                  <p class="member-name">Camille DURAND</p>
+                  <p class="member-status">Secrétaire</p>
+                </figcaption>
+              </figure>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-              <img
-                class="member-picture img-fluid img-thumbnail"
-                src="./assets/img/photo-david-paris.jpg"
-                alt="Photo de David PARIS"
-                srcset=""
-              />
-              <p class="member-name">David PARIS</p>
-              <p class="member-status">Responsable de recrutement</p>
+              <figure>
+                <img
+                  class="member-pict img-fluid img-thumbnail"
+                  src="./assets/img/photo-david-paris.jpg"
+                  alt="Photo de David PARIS"
+                  srcset=""
+                />
+                <figcaption>
+                  <p class="member-name">David PARIS</p>
+                  <p class="member-status">Responsable de recrutement</p>
+                </figcaption>
+              </figure>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-              <img
-                class="member-picture img-fluid img-thumbnail"
-                src="./assets/img/photo-elise-marchand.jpg"
-                alt="Photo de Elise MARCHAND"
-                srcset=""
-              />
-              <p class="member-name">Elise MARCHAND</p>
-              <p class="member-status">Secrétaire administratif</p>
+              <figure>
+                <img
+                  class="member-pict img-fluid img-thumbnail"
+                  src="./assets/img/photo-elise-marchand.jpg"
+                  alt="Photo de Elise MARCHAND"
+                  srcset=""
+                />
+                <figcaption>
+                  <p class="member-name">Elise MARCHAND</p>
+                  <p class="member-status">Secrétaire administratif</p>
+                </figcaption>
+              </figure>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-              <img
-                class="member-picture img-fluid img-thumbnail"
-                src="./assets/img/photo-patricia-bernes.jpg"
-                alt="Photo de Patricia BERNES"
-                srcset=""
-              />
-              <p class="member-name">Patricia BERNES</p>
-              <p class="member-status">Assistante administrative</p>
+              <figure>
+                <img
+                  class="member-pict img-fluid img-thumbnail"
+                  src="./assets/img/photo-patricia-bernes.jpg"
+                  alt="Photo de Patricia BERNES"
+                  srcset=""
+                />
+                <figcaption>
+                  <p class="member-name">Patricia BERNES</p>
+                  <p class="member-status">Assistante administrative</p>
+                </figcaption>
+              </figure>
             </div>
           </div>
         </section>
       </div>
     </main>
     <footer>
-      <div class="container-fluid pt-5 pb-3 bg-blue txt-white">
+      <div class="container-fluid mt-5 pt-5 pb-3 bg-blue txt-white">
         <div class="footer-content row mx-auto">
           <!-- <div class="col col-md-6 col-lg-4"> -->
-          <section class="contact__details col col-md-6 col-xl-4">
+          <section class="contact-details col col-md-6 col-xl-4">
             <h6 class="footer__title text-center mb-3">Coordonnées</h6>
             <ul class="mx-auto">
               <li class="mb-2">
@@ -257,17 +289,17 @@
                 <a href="./a-propos.html">A propos</a>
               </li>
               <li class="mb-2">
-                <a href="#">Service</a>
+                <a href="./services.html">Services</a>
               </li>
               <li class="mb-2">
-                <a href="#">Activités</a>
+                <a href="./activites.html">Activités</a>
               </li>
               <li class="mb-2">
-                <a href="#">Contactez-nous</a>
+                <a href="./contact.html">Contactez-nous</a>
               </li>
             </ul>
           </section>
-          <section class="social__links col col-12 col-xl-4">
+          <section class="social-links col col-12 col-xl-4">
             <h6 class="footer__title text-center mb-3">Suivez-nous !</h6>
             <ul
               class="d-flex p-0 flex-row flex-xl-column align-items-center justify-content-center"
@@ -292,7 +324,7 @@
       <p class="text-center py-2 mb-0 bg-green txt-white">
         Tous droits réservés © ABBA-DEV - Annecy | 2022
       </p>
-      <div class="arrow__up">
+      <div class="arrow-up">
         <a href="#"> <i class="bi bi-caret-up-square-fill"></i></a>
       </div>
     </footer>

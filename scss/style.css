@@ -34,11 +34,12 @@ body {
 
 body h1 {
   font-family: "Paytone One", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: #19647e;
 }
 
 body h2 {
+  line-height: 1.1;
   padding-left: 1.8rem;
   position: relative;
   font-size: 1.25rem;
@@ -49,11 +50,10 @@ body h2:after {
   content: "";
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
-  height: 40%;
+  height: 100%;
   width: 0.8rem;
-  -webkit-transform: translateY(-12%);
-          transform: translateY(-12%);
   background-color: #28afb0;
 }
 
@@ -146,13 +146,13 @@ nav .navbar-collapse.show .navbar-nav {
   background-color: #28afb0;
 }
 
-.hero__section {
+.hero {
   position: relative;
-  margin-top: 98px;
+  margin-top: 6.1rem;
   height: 88vh;
 }
 
-.hero__section .hero__section-img {
+.hero__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -162,7 +162,7 @@ nav .navbar-collapse.show .navbar-nav {
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.hero__section .hero__section-content {
+.hero__content {
   position: absolute;
   background-color: rgba(37, 129, 129, 0.6);
   -webkit-box-shadow: 3px 0px 3px rgba(105, 110, 110, 0.7);
@@ -186,7 +186,7 @@ nav .navbar-collapse.show .navbar-nav {
   color: #ffffff;
 }
 
-.hero__section .hero__section-content .hero__section-title {
+.hero__content .hero__title {
   font-family: "Paytone One", sans-serif;
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -194,14 +194,14 @@ nav .navbar-collapse.show .navbar-nav {
   letter-spacing: 0.15rem;
 }
 
-.hero__section .hero__section-content .hero__section-body {
+.hero__content .hero__body {
   font-size: 1rem;
   font-weight: regular;
   padding-bottom: 1rem;
   max-width: 40ch;
 }
 
-.hero__section .hero__section-content .hero__section-cta {
+.hero__content .hero__cta {
   font-weight: bold;
   color: #19647e;
   background-color: #f4d35e;
@@ -214,15 +214,12 @@ nav .navbar-collapse.show .navbar-nav {
           box-shadow: 3px 3px 3px #19647e;
 }
 
-.define_why .define_why__content {
-  max-width: 60ch;
-}
-
-.define_why img {
-  max-height: 270px;
+.define-why__img {
+  height: auto;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 1rem;
+  float: right;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
@@ -246,27 +243,27 @@ nav .navbar-collapse.show .navbar-nav {
   background-color: #19647e;
 }
 
-.review .card {
+.reviews .card {
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.review article img {
+.reviews article img {
   height: 250px;
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.review .card-body {
+.reviews .card-body {
   height: auto;
 }
 
-.review .card-body .card-title {
+.reviews .card-body .card-title {
   font-weight: 700;
 }
 
-.review .card-body .bi-star-fill {
+.reviews .card-body .bi-star-fill {
   padding-right: 0.3rem;
   color: #ffc400;
 }
@@ -295,16 +292,16 @@ footer .footer__title:after {
   background-color: white;
 }
 
-footer .contact__details .bi-geo-alt-fill,
-footer .contact__details .bi-envelope-fill,
-footer .contact__details .bi-telephone-fill {
+footer .contact-details .bi-geo-alt-fill,
+footer .contact-details .bi-envelope-fill,
+footer .contact-details .bi-telephone-fill {
   font-size: 1rem;
 }
 
-footer .social__links .bi-facebook,
-footer .social__links .bi-twitter,
-footer .social__links .bi-instagram,
-footer .social__links .bi-linkedin {
+footer .social-links .bi-facebook,
+footer .social-links .bi-twitter,
+footer .social-links .bi-instagram,
+footer .social-links .bi-linkedin {
   margin-top: 1.8rem;
   font-size: 1.3rem;
 }
@@ -314,7 +311,7 @@ footer a:hover {
   color: #f4d35e;
 }
 
-footer .arrow__up {
+footer .arrow-up {
   position: absolute;
   top: -1.5rem;
   right: 3rem;
@@ -323,33 +320,37 @@ footer .arrow__up {
   color: #f4d35e;
 }
 
-footer .arrow__up .bi-caret-up-square-fill {
+footer .arrow-up .bi-caret-up-square-fill {
   text-shadow: 0 0 5px rgba(53, 53, 53, 0.7);
 }
 
-footer .arrow__up .bi-caret-up-square-fill:hover {
+footer .arrow-up .bi-caret-up-square-fill:hover {
   cursor: pointer;
 }
 
-.about-us {
-  margin-top: 98px;
+.about-us-title {
+  margin-top: 6.1rem;
 }
 
-.about-us-content {
-  max-width: 64ch;
-}
-
-.company-pict,
-.map-pict {
-  width: auto;
-  height: 300px;
+.presentation__company-pict, .presentation__map-pict {
+  height: auto;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.member-picture {
+.presentation__map-pict {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.member-pict {
   height: 300px;
   width: 450px;
   -o-object-fit: cover;
@@ -391,11 +392,18 @@ footer .arrow__up .bi-caret-up-square-fill:hover {
   body .hero__section-content .hero__section-body {
     font-size: 1rem;
   }
+  body h1 {
+    font-size: 1.8rem;
+  }
   body h2 {
     font-size: 1.5rem;
   }
   body .footer-content {
     max-width: 768px;
+  }
+  body .about-us__company-pict, body .about-us__map-pict {
+    height: auto;
+    width: 90%;
   }
 }
 
@@ -406,17 +414,37 @@ footer .arrow__up .bi-caret-up-square-fill:hover {
   .review .card-body {
     height: 250px;
   }
+  .about-us__content {
+    padding: 0 8% 0 0;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .review .card-body {
     height: 220px;
   }
+  .define-why__img {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  .define-why__img {
+    width: 80%;
+  }
   .review .card-body {
     height: 180px;
+  }
+  .presentation__body {
+    max-width: 62ch;
+  }
+  .presentation__company-pict {
+    width: 100%;
+    max-height: 400px;
+  }
+  .presentation__map-pict {
+    max-height: 400px;
+    width: 100%;
   }
   footer .social__links .bi-facebook,
   footer .social__links .bi-twitter,
