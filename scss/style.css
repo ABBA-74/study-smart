@@ -57,6 +57,15 @@ body h2:after {
   background-color: #28afb0;
 }
 
+body:not(.container-md) {
+  background-color: #f3f3f3;
+}
+
+.container-md {
+  padding: 0 5rem;
+  background-color: #ffffff;
+}
+
 nav {
   z-index: 10;
   max-width: 100vw;
@@ -243,27 +252,27 @@ nav .navbar-collapse.show .navbar-nav {
   background-color: #19647e;
 }
 
-.reviews .card {
+.reviews .card,
+.activities .card {
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.reviews article img {
+.reviews article img,
+.activities article img {
   height: 250px;
   width: auto;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.reviews .card-body {
+.reviews .card-body,
+.activities .card-body {
   height: auto;
 }
 
-.reviews .card-body .card-title {
-  font-weight: 700;
-}
-
-.reviews .card-body .bi-star-fill {
+.reviews .card-body .bi-star-fill,
+.activities .card-body .bi-star-fill {
   padding-right: 0.3rem;
   color: #ffc400;
 }
@@ -370,6 +379,16 @@ footer .arrow-up .bi-caret-up-square-fill:hover {
   padding-bottom: 1.2rem;
 }
 
+.advantage__resume-pict {
+  height: auto;
+  max-height: 450px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 .bg-green {
   background-color: #28afb0;
 }
@@ -398,6 +417,9 @@ footer .arrow-up .bi-caret-up-square-fill:hover {
   body h2 {
     font-size: 1.5rem;
   }
+  body .advantage__resume-pict {
+    max-height: 550px;
+  }
   body .footer-content {
     max-width: 768px;
   }
@@ -417,14 +439,27 @@ footer .arrow-up .bi-caret-up-square-fill:hover {
   .about-us__content {
     padding: 0 8% 0 0;
   }
+  .advantage__resume-pict {
+    width: 100%;
+  }
+  .advantage__resume-caption {
+    width: 95%;
+  }
+  .activities .card-body {
+    height: 200px;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .review .card-body {
-    height: 220px;
+    height: 260px;
   }
   .define-why__img {
     width: 90%;
+  }
+  .advantage__resume-pict {
+    height: 375px;
+    width: 80%;
   }
 }
 
@@ -433,7 +468,7 @@ footer .arrow-up .bi-caret-up-square-fill:hover {
     width: 80%;
   }
   .review .card-body {
-    height: 180px;
+    height: 220px;
   }
   .presentation__body {
     max-width: 62ch;
@@ -445,6 +480,15 @@ footer .arrow-up .bi-caret-up-square-fill:hover {
   .presentation__map-pict {
     max-height: 400px;
     width: 100%;
+  }
+  .advantage__resume-pict {
+    height: 475px;
+  }
+  .advantage__resume-caption, .advantage__resume-pict {
+    width: 85%;
+  }
+  .activities .card-body {
+    height: 180px;
   }
   footer .social__links .bi-facebook,
   footer .social__links .bi-twitter,

@@ -9,7 +9,7 @@
 ///////////////////////////////
 
 $clr-yellow: #f4d35e;
-$clr-green: #28afb0;
+$clr-green: #017a7b;
 $clr-white: #ffffff;
 $clr-blue: #19647e;
 
@@ -70,6 +70,17 @@ body {
       background-color: $clr-green;
     }
   }
+  .h5 {
+    color: $clr-green;
+  }
+}
+
+body:not(.container-md) {
+  background-color: #f3f3f3;
+}
+.container-md {
+  padding: 0 5rem;
+  background-color: #ffffff;
 }
 
 ///////////////////////////////
@@ -79,34 +90,50 @@ body {
 nav {
   z-index: 10;
   max-width: 100vw;
-  height: 6rem;
+  // height: 6rem;
   background-color: $clr-blue;
+  background: linear-gradient(
+    -45deg,
+    $clr-blue 10%,
+    $clr-green 25%,
+    $clr-blue 85%,
+    $clr-green 95%
+  );
   box-shadow: 0px 3px 3px rgba(27, 29, 29, 0.7);
   z-index: 20;
   .container-fluid {
     padding: 0 !important;
   }
   .navbar-toggler {
-    background-color: $clr-green !important;
-    margin-right: 2rem;
+    background-color: $clr-green;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: $shadow;
+    &:focus,
+    &:active {
+      outline: none;
+      box-shadow: $shadow;
+    }
   }
-  .navbar-toggler-icon .line-burger-btn {
-    width: 100%;
-    float: left;
-    height: 2px;
-    background-color: #fff;
+  .navbar-toggler-icon {
+    &:focus {
+      box-shadow: none;
+    }
+    .line-burger-btn {
+      width: 100%;
+      float: left;
+      height: 2px;
+      background-color: #fff;
 
-    margin-top: 3px;
-    margin-bottom: 5px;
+      margin-top: 3px;
+      margin-bottom: 5px;
+    }
   }
   .navbar-brand {
     font-weight: bolder;
     max-width: 10rem;
     height: 3.75rem;
-    margin-left: 2rem;
     display: grid;
     align-content: center;
     color: #000;
@@ -117,7 +144,7 @@ nav {
       display: inline-block;
       text-align: center;
       width: 2rem;
-      box-shadow: 3px 3px 5px #00000067;
+      box-shadow: -0.3rem -0.2rem 0.33rem #00000067;
       border-radius: 0.2rem;
     }
     .line-1 span:nth-child(2n + 1),
@@ -136,20 +163,20 @@ nav {
   }
   .nav-link:hover,
   .nav-link.active {
-    color: $clr-yellow !important;
+    color: $clr-yellow;
   }
 
   // NAV COLLAPSE SHOW
   .navbar-collapse.show .navbar-nav {
     z-index: 5;
     width: 100vw;
-    background-color: $clr-green;
+    // background-color: $clr-green;
   }
 }
 
 .hero {
   position: relative;
-  margin-top: 6.1rem;
+  margin-top: 5rem;
   height: 88vh;
   &__img {
     width: 100%;
@@ -234,10 +261,11 @@ nav {
   }
 }
 ///////////////////////////////
-/// SECTION 1 - Reviews
+/// SECTION 3 - Reviews + ACTIVITIES PAGES
 ///////////////////////////////
 
-.reviews {
+.reviews,
+.activities {
   .card {
     box-shadow: $shadow;
   }
@@ -248,9 +276,9 @@ nav {
   }
   .card-body {
     height: auto;
-    .card-title {
-      font-weight: 700;
-    }
+    // .card-title {
+    //   font-weight: 700;
+    // }
     .bi-star-fill {
       padding-right: 0.3rem;
       color: rgb(255, 196, 0);
@@ -306,7 +334,7 @@ footer {
   .arrow-up {
     position: absolute;
     top: -1.5rem;
-    right: 3rem;
+    right: 10%;
     height: 1rem;
     font-size: 3rem;
     color: $clr-yellow;
@@ -314,6 +342,7 @@ footer {
       text-shadow: 0 0 5px rgba(53, 53, 53, 0.7);
       &:hover {
         cursor: pointer;
+        // color: $clr-green;
       }
     }
   }
@@ -324,7 +353,7 @@ footer {
 ///////////////////////////////
 
 .about-us-title {
-  margin-top: 6.1rem;
+  margin-top: 5rem;
 }
 
 .presentation {
@@ -360,6 +389,48 @@ footer {
 .member-status {
   padding-bottom: 1.2rem;
 }
+
+///////////////////////////////
+/// ACTIVITY PAGE
+///////////////////////////////
+.advantage__resume {
+  &-pict {
+    height: auto;
+    max-height: 450px;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: $shadow;
+  }
+}
+
+.activities-title {
+  margin-top: 5rem;
+}
+
+.activities-article {
+  position: relative;
+  min-height: 200px;
+
+  .btn {
+    box-shadow: $shadow;
+    position: absolute;
+    bottom: 1rem;
+    background-color: $clr-green;
+    // right: 1rem;
+    left: 1rem;
+    font-size: inherit;
+    &:hover {
+      background-color: $clr-blue;
+    }
+  }
+}
+
+// .advantage__resume-pict {
+//   min-height: 420px;
+//   width: 100%;
+//   object-fit: cover;
+//   box-shadow: $shadow;
+// }
 ///////////////////////////////
 /// UTILITIES
 ///////////////////////////////
@@ -372,6 +443,12 @@ footer {
 }
 .txt-white {
   color: $clr-white;
+}
+.txt-blue {
+  color: $clr-blue;
+}
+.txt-green {
+  color: $clr-green;
 }
 
 ///////////////////////////////
@@ -396,6 +473,11 @@ footer {
     h2 {
       font-size: 1.5rem;
     }
+    .advantage__resume {
+      &-pict {
+        max-height: 550px;
+      }
+    }
     .footer-content {
       max-width: 768px;
     }
@@ -415,20 +497,38 @@ footer {
     font-size: 0.9rem;
   }
   .review .card-body {
-    height: 250px;
+    height: 210px;
   }
   .about-us__content {
     // max-width: 64ch;
     padding: 0 8% 0 0;
   }
+  .advantage__resume {
+    &-pict {
+      width: 100%;
+    }
+    &-caption {
+      width: 95%;
+    }
+  }
+  .activities .card-body {
+    height: 230px;
+  }
 }
 /// Breakpoint Large -lg
 @media screen and (min-width: 992px) {
   .review .card-body {
-    height: 220px;
+    height: 260px;
   }
   .define-why__img {
     width: 90%;
+  }
+
+  .advantage__resume {
+    &-pict {
+      height: 375px;
+      width: 80%;
+    }
   }
 }
 
@@ -438,9 +538,8 @@ footer {
     width: 80%;
   }
   .review .card-body {
-    height: 180px;
+    height: 220px;
   }
-
   .presentation {
     &__body {
       max-width: 62ch;
@@ -455,6 +554,22 @@ footer {
       width: 100%;
     }
   }
+
+  .advantage__resume {
+    &-pict {
+      height: 475px;
+    }
+    &-caption,
+    &-pict {
+      width: 85%;
+      // width: 100%;
+    }
+  }
+
+  .activities .card-body {
+    height: 180px;
+  }
+
   footer {
     .social__links {
       .bi-facebook,
@@ -464,5 +579,11 @@ footer {
         font-size: 1.2 rem;
       }
     }
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .activities-article {
+    min-height: 220px;
   }
 }
