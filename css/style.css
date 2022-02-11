@@ -9,6 +9,7 @@
 html {
   min-height: 100vh;
   max-width: 100vw;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -517,6 +518,11 @@ textarea:focus {
 .btn:hover {
   background-color: #19647e;
   color: #f4d35e;
+}
+.btn:active, .btn:focus {
+  outline: none !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
 }
 
 @media screen and (min-width: 576px) {
