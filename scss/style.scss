@@ -82,7 +82,7 @@ body {
   a:visited {
     text-decoration: none;
     list-style: none;
-    color: inherit;
+    // color: inherit;
   }
   li {
     list-style-type: none;
@@ -168,8 +168,13 @@ nav {
     }
   }
 
+  .nav-link {
+    color: inherit;
+  }
+
   .nav-link:hover,
   .nav-link.active {
+    position: relative;
     color: $clr-yellow;
   }
 
@@ -188,8 +193,6 @@ nav {
 .navbar-brand,
 footer .footer-brand {
   font-weight: bolder;
-  // max-width: 12rem;
-  // height: 3.75rem;
   height: 3.3rem;
   display: grid;
   align-content: center;
@@ -201,7 +204,6 @@ footer .footer-brand {
     display: inline-block;
     text-align: center;
     width: 2rem;
-    box-shadow: 0.3rem 0.2rem 0.33rem #00000067;
     box-shadow: 0 0 0.33rem #00000067, inset -0.12rem -0.12rem 0.2rem #383838c2,
       -0.3rem -0.2rem 0.63rem #00000067,
       inset 3px 3px 5px rgba(255, 255, 255, 0.418);
@@ -372,9 +374,6 @@ footer .footer-brand {
   }
   .card-body {
     height: auto;
-    // .card-title {
-    //   font-weight: 700;
-    // }
     .bi-star-fill {
       padding-right: 0.3rem;
       color: rgb(255, 196, 0);
@@ -389,6 +388,7 @@ footer .footer-brand {
 footer {
   position: relative;
   font-size: 0.75rem;
+  color: white;
   .footer__title {
     position: relative;
     text-transform: uppercase;
@@ -422,24 +422,26 @@ footer {
       font-size: 1.3rem;
     }
   }
-  a:hover > .bi,
-  a:hover {
-    color: $clr-yellow;
+
+  a {
+    color: inherit;
+    &:hover,
+    &:hover > .bi {
+      color: $clr-yellow;
+    }
   }
 
   .arrow-up {
     position: absolute;
     top: -1.5rem;
     right: 10%;
-    font-size: 3rem;
-    color: $clr-yellow;
-
-    a {
-      padding: 0;
-      margin: 0;
-    }
     .bi-caret-up-square-fill {
+      font-size: 3rem;
+      color: $clr-yellow;
       text-shadow: 0 0 5px rgba(53, 53, 53, 0.7);
+      &:hover {
+        text-shadow: none;
+      }
     }
   }
 }
@@ -604,12 +606,13 @@ textarea:focus {
 
 .btn {
   box-shadow: $shadow;
-  background-color: $clr-green;
   font-size: inherit;
   color: $clr-white;
+  // color: inherit;
   &:hover {
     background-color: $clr-blue;
     color: $clr-yellow;
+    box-shadow: none;
   }
   &:active,
   &:focus {
@@ -667,6 +670,26 @@ textarea:focus {
 
 /// Breakpoint Medium - md
 @media screen and (min-width: 768px) {
+  .nav-link:hover,
+  .nav-link.active {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0.2rem;
+      left: 0;
+      width: 0;
+      height: 0.2rem;
+      border-radius: 5rem;
+      background: $clr-yellow;
+      animation: 0.3s ease-in-out forwards anim;
+      @keyframes anim {
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
   body,
   .form-control {
     font-size: 0.9rem;
