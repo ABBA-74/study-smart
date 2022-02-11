@@ -74,10 +74,6 @@ body:not(.container-md) {
   background-color: #ffffff;
 }
 
-section {
-  padding-bottom: 2rem;
-}
-
 nav {
   color: white;
   z-index: 10;
@@ -227,8 +223,8 @@ footer .footer-brand span {
 
 .hero {
   position: relative;
-  margin-top: 5rem;
   height: 88vh;
+  margin-top: 15rem;
 }
 .hero__img {
   width: 100%;
@@ -261,20 +257,17 @@ footer .footer-brand span {
 }
 .hero__content .hero__body {
   font-size: 1rem;
-  font-weight: regular;
-  padding-bottom: 1rem;
   max-width: 40ch;
 }
 .hero__content .hero__cta {
-  font-weight: bold;
   color: #19647e;
   background-color: #f4d35e;
   font-size: 1rem;
   max-width: 15rem;
-  padding: 0.69rem 0.23rem;
-  border-radius: 0.4rem;
-  border: none;
-  box-shadow: 3px 3px 3px #19647e;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+.hero__content .hero__cta:hover {
+  box-shadow: inset rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .define-why__img {
