@@ -319,6 +319,7 @@ footer {
   color: white;
 }
 footer .footer__title {
+  font-size: 1rem;
   position: relative;
   text-transform: uppercase;
 }
