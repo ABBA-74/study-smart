@@ -117,8 +117,6 @@ header nav {
   color: white;
   z-index: 10;
   max-width: 100vw;
-  // height: 6rem;
-  // background-color: $clr-blue;
   background: $linear-gradient;
   box-shadow: 0px 3px 3px rgba(27, 29, 29, 0.7);
   z-index: 20;
@@ -302,8 +300,6 @@ footer .footer-brand {
     }
     .hero__body {
       font-size: 1rem;
-      // font-weight: regular;
-      // padding-bottom: 1rem;
       max-width: 40ch;
     }
     .hero__cta {
@@ -387,7 +383,6 @@ footer {
   .footer__title {
     font-size: 1rem;
     position: relative;
-    text-transform: uppercase;
     &:after {
       content: "";
       z-index: 10;
@@ -503,7 +498,6 @@ footer {
     position: absolute;
     bottom: 1rem;
     background-color: $clr-green;
-    // right: 1rem;
     left: 1rem;
     font-size: inherit;
     &:hover {
@@ -604,7 +598,6 @@ textarea:focus {
   box-shadow: $shadow;
   font-size: inherit;
   color: $clr-white;
-  // color: inherit;
   &:hover {
     background-color: $clr-blue;
     color: $clr-yellow;
@@ -694,7 +687,6 @@ textarea:focus {
     height: 14rem;
   }
   .about-us__content {
-    // max-width: 64ch;
     padding: 0 8% 0 0;
   }
   .advantage__resume {
