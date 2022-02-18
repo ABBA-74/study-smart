@@ -21,13 +21,6 @@ $linear-gradient: linear-gradient(
   $clr-blue 85%,
   $clr-green 95%
 );
-$linear-gradient-2: linear-gradient(
-  45deg,
-  $clr-blue 10%,
-  $clr-green 25%,
-  $clr-blue 85%,
-  $clr-green 95%
-);
 
 /////////////////////////////////////////////////////
 /// RESET CSS + STYLES a - li - html - body
@@ -345,7 +338,7 @@ footer .footer-brand {
     width: 100%;
     .card-title {
       width: 100%;
-      background-color: $clr-blue;
+      background: $linear-gradient;
     }
   }
 }
